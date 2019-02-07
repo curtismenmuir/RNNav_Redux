@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { View, Dimensions, StyleSheet } from "react-native";
 import { connect } from "react-redux";
-import { DrawerHeader } from "../components/DrawerHeader";
-import { DrawerBody } from "../components/DrawerBody";
-import { LogoutButton } from "../components/LogoutButton";
+import DrawerHeader from "../components/DrawerHeader";
+import DrawerBody from "../components/DrawerBody";
+import LogoutButton from "../components/LogoutButton";
 
 export class Drawer extends Component {
   render() {

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { View, StyleSheet } from "react-native";
-import { DrawerElement } from "./DrawerElement";
+import DrawerElement from "./DrawerElement";
 
-export class DrawerBody extends Component {
+export default class DrawerBody extends Component {
   render() {
     return (
       <View>

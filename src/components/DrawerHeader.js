@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { store } from "../navigation/store";
 
-export class DrawerHeader extends Component {
+export default class DrawerHeader extends Component {
   render() {
     let { username } = store.getState().user;
     return (

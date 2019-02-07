@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Text, TouchableHighlight } from "react-native";
 
-export class DrawerElement extends Component {
+export default class DrawerElement extends Component {
   constructor(props) {
     super(props);
   }

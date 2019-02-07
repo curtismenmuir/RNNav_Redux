@@ -3,7 +3,7 @@ import { Button } from "react-native";
 import { store } from "../navigation/store";
 import { logUserOut } from "../actions";
 
-export class LogoutButton extends Component {
+export default class LogoutButton extends Component {
   _logout = async () => {
     store.dispatch(logUserOut());
   };

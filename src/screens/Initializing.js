@@ -4,12 +4,21 @@ import { goToAuth, goHome } from "../navigation/navigation";
 import { connect } from "react-redux";
 import { isUserLoggedIn } from "../actions";
 import { store } from "../navigation/store";
+import { autoSync } from "../services/auto-sync";
 
 class Initializing extends React.Component {
   constructor(props) {
     super(props);
     store.subscribe(this.onStoreUpdate.bind(this));
     store.dispatch(isUserLoggedIn());
+  }
+
+  componentDidMount() {
+    this.sync();
+  }
+
+  async sync() {
+    await autoSync();
   }
 
   onStoreUpdate() {

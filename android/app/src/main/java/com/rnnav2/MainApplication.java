@@ -11,6 +11,8 @@ import com.facebook.soloader.SoLoader;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
+import com.horcrux.svg.SvgPackage;
+import com.transistorsoft.rnbackgroundfetch.RNBackgroundFetchPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -37,8 +39,8 @@ public class MainApplication extends NavigationApplication {
     // Add additional packages you require here
     // No need to add RnnPackage and MainReactPackage
     return Arrays.<ReactPackage>asList(
-    // eg. new VectorIconsPackage()
-    );
+        // eg. new VectorIconsPackage()
+        new SvgPackage(), new RNBackgroundFetchPackage());
   }
 
   @Override

@@ -148,6 +148,7 @@ dependencies {
     implementation project(':react-native-navigation')
     implementation project(':react-native-svg')
     implementation project(':react-native-background-fetch')
+    implementation project(':react-native-sound')
     implementation 'com.android.support:design:27.1.0'
 }
 

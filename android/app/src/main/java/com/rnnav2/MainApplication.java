@@ -13,6 +13,7 @@ import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
 import com.horcrux.svg.SvgPackage;
 import com.transistorsoft.rnbackgroundfetch.RNBackgroundFetchPackage;
+import com.zmxv.RNSound.RNSoundPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -40,7 +41,7 @@ public class MainApplication extends NavigationApplication {
     // No need to add RnnPackage and MainReactPackage
     return Arrays.<ReactPackage>asList(
         // eg. new VectorIconsPackage()
-        new SvgPackage(), new RNBackgroundFetchPackage());
+        new SvgPackage(), new RNBackgroundFetchPackage(), new RNSoundPackage());
   }
 
   @Override

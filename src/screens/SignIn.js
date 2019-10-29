@@ -3,8 +3,20 @@ import { View, StyleSheet, TextInput, Button } from "react-native";
 import { store } from "../navigation/store";
 import { connect } from "react-redux";
 import { logUserIn } from "../actions";
+var Sound = require("react-native-sound");
 
 export class SignIn extends React.Component {
+  componentWillMount() {
+    Sound.setCategory("Playback");
+    this.intervalBeep = new Sound("beep_400.wav", Sound.MAIN_BUNDLE, error => {
+      if (error) {
+        console.log("failed to load the sound", error);
+      } else {
+        console.log("Music Prepared");
+      }
+    });
+  }
+
   state = {
     username: "",
     password: ""
@@ -20,6 +32,7 @@ export class SignIn extends React.Component {
   _signIn = () => {
     const { username, password } = this.state;
     if (this._validateUsername(username) && this._validatePassword(password)) {
+      this.intervalBeep.play();
       store.dispatch(logUserIn(username, password));
     } else {
       alert("Please ensure you have entered a valid username and password");
